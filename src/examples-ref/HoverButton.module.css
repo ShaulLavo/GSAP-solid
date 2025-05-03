@@ -1,0 +1,27 @@
+/* .inner {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	float: left;
+} */
+
+/* .inner > span {
+	display: inline-block;
+	transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+} */
+
+/* .hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #101010;
+	transform: translateY(40px);
+}
+
+.button:hover .text {
+	transform: translateY(-40px);
+}
+
+.button:hover .hover {
+	transform: translateY(0);
+} */
