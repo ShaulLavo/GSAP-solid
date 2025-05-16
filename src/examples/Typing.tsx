@@ -11,9 +11,7 @@ export function Typing(props: TypingProps) {
 	const [text, setText] = createSignal(props.placeholder ?? 'Hello :)')
 
 	const syncToEnd = () => {
-		const el = inputRef
-		const len = el.value.length
-		el.selectionStart = el.selectionEnd = len
+		inputRef.selectionStart = inputRef.selectionEnd = inputRef.value.length
 	}
 
 	const handleInput = (e: InputEvent & { currentTarget: HTMLInputElement }) => {
@@ -46,6 +44,7 @@ export function Typing(props: TypingProps) {
 				value={text()}
 				onInput={handleInput}
 				onKeyDown={blockNav}
+				onChange={e => e.preventDefault()}
 			/>
 			<p class="text-6xl leading-[80px] font-roboto text-center select-none">
 				{text()}

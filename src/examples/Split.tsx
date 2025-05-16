@@ -14,7 +14,7 @@ export function Split(props: SplitProps) {
 	const y = () => GSAP.random(-150, 150)
 	const rotation = () => GSAP.random(-720, 720)
 	return (
-		<div class="inset-0 flex items-center justify-center bg-zinc-900">
+		<div class="inset-0 flex items-center justify-center ">
 			<GSAP.p
 				split={{ type: 'chars' }}
 				behavior="from"

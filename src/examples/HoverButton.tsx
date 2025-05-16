@@ -23,7 +23,6 @@ export function HoverButton(props: HoverButtonProps) {
 		'onHover',
 		'onLeave'
 	])
-	const [isMounted, setIsMounted] = createSignal(false)
 	const [y, setY] = createSignal(0)
 	const [y2, setY2] = createSignal(BASE)
 	const [w, setW] = createSignal<number>(0)
@@ -48,9 +47,7 @@ export function HoverButton(props: HoverButtonProps) {
 			setY2(BASE)
 			local.onLeave?.()
 		})
-		setIsMounted(true)
 	})
-
 	return (
 		<div class="h-8 overflow-hidden w-fit">
 			<a
@@ -74,7 +71,6 @@ export function HoverButton(props: HoverButtonProps) {
 					y={y()}
 					stagger={() => Math.random() * 0.1}
 					duration={0.5}
-					paused={!isMounted()}
 					{...local.spanProps}
 				>
 					{local.label}
@@ -87,7 +83,6 @@ export function HoverButton(props: HoverButtonProps) {
 					y={y2()}
 					stagger={() => Math.random() * 0.1}
 					duration={0.5}
-					paused={!isMounted()}
 					{...local.spanProps}
 				>
 					{local.hoverLabel ?? local.label}

@@ -92,6 +92,9 @@ function anime({
 			tween.reversed(rest.reversed ?? false)
 			tween.repeatDelay(rest.repeatDelay ?? 0)
 			tween.duration(rest.duration ?? 0)
+			if (tl) {
+				tl.add(tween)
+			}
 		}
 	})
 }

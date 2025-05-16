@@ -1,1 +1,4 @@
 @import 'tailwindcss';
+::selection {
+	background-color: cadetblue;
+}
